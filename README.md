@@ -15,6 +15,35 @@
 
 ---
 
+## 🛠️ Kata Kunci & Fungsi Bawaan
+
+### 1. Kata Kunci Utama (Keywords)
+
+| Kata Kunci | Deskripsi | Contoh Penggunaan |
+| :--- | :--- | :--- |
+| `simpan` | Deklarasi atau mengubah nilai variabel | `simpan umur = 20` |
+| `cetak` | Menampilkan keluaran ke konsol | `cetak "Halo Dunia"` |
+| `tanya` | Menerima masukan (*input*) dari pengguna | `simpan nama = tanya("Nama kamu: ")` |
+| `jika` ... `maka` | Percabangan kondisi | `jika nilai > 70 maka` |
+| `kalau_tidak` | Alternatif jika kondisi `jika` tidak terpenuhi | `kalau_tidak` |
+| `selama` | Perulangan berdasarkan kondisi boolean | `selama hitungan > 0` |
+| `ulang` ... `kali` | Perulangan dengan jumlah pasti | `ulang 5 kali` |
+| `selesai` | Penutup blok struktur (kondisi, loop, atau fungsi) | `selesai` |
+| `fungsi` | Deklarasi fungsi baru | `fungsi hitung(a, b)` |
+| `panggil` | Memanggil fungsi yang telah didefinisikan | `simpan x = panggil hitung(2, 3)` |
+| `kembalikan` | Mengembalikan nilai dari dalam fungsi | `kembalikan a + b` |
+| `tambah` | Menambahkan elemen ke dalam daftar (*list*) | `tambah daftar_angka = 10` |
+| `hapus` | Menghapus elemen dari daftar (*list*) berdasarkan nilai | `hapus daftar_angka = 10` |
+
+---
+
+### 2. Fungsi Bawaan (Built-in Functions)
+
+#### 🧮 Matematika & Angka Acak
+* **`akar(n)`**: Menghitung akar kuadrat dari bilangan $n$.
+  ```indoscript
+  simpan hasil = akar(16) # Hasil: 4
+
 ## 💻 Contoh Sintaks IndoScript
 
 ```indoscript
