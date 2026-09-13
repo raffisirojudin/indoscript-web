@@ -39,10 +39,10 @@
 
 ### 2. Fungsi Bawaan (Built-in Functions)
 
-#### 🧮 Matematika & Angka Acak
-* **`akar(n)`**: Menghitung akar kuadrat dari bilangan $n$.
+#### 📏 Konversi Tipe Data
+* **`tulisan(x)`**: Mengonversi nilai ke bentuk tulisan (*string*).
   ```indoscript
-  simpan hasil = akar(16) # Hasil: 4
+  simpan teks_angka = tulisan(100) # Hasil: "100"
 
 ## 💻 Contoh Sintaks IndoScript
 
@@ -54,7 +54,7 @@ cetak "Halo " + nama + "!"
 # Perulangan
 simpan hitungan = 3
 selama hitungan > 0
-    cetak "Hitung mundur: " + str(hitungan)
+    cetak "Hitung mundur: " + tulisan(hitungan)
     simpan hitungan = hitungan - 1
 selesai
 
@@ -64,4 +64,4 @@ fungsi tambah_lima(angka)
 selesai
 
 simpan hasil = panggil tambah_lima(10)
-cetak "Hasil: " + str(hasil)
+cetak "Hasil: " + tulisan(hasil)
