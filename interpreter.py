@@ -50,17 +50,20 @@ TEKS_BANTUAN = """
        <perintah>
    selesai
 
-6. Manipulasi Daftar (List):
+6. Manipulasi Data & Konversi Tipe:
+   tulisan(<nilai>)      # Mengonversi ke teks/string
+   bulat(<nilai>)        # Mengonversi ke bilangan bulat/int
+   desimal(<nilai>)      # Mengonversi ke desimal/float
    tambah <nama_list> = <nilai>
    hapus <nama_list> = <nilai>
-   ukuran(<nama_list>)  # Mendapatkan panjang list/teks
+   ukuran(<nama_list>)   # Panjang list atau teks
 
 7. Operasi Berkas (File I/O):
    tulis_file "<path_file>" = "<isi_teks>"
    baca_file("<path_file>")
 
 8. Fungsi Bawaan Matematika & Acak:
-   acak(<min>, <max>)   # Angka acak bulat
+   acak(<min>, <max>)    # Angka acak bulat
    akar(<angka>)        # Akar kuadrat
    pangkat(<x>, <y>)    # x dipangkatkan y
 
@@ -73,7 +76,7 @@ TEKS_BANTUAN = """
    panggil <nama_fungsi>(<argumen>)
 
 10. Perintah Sistem:
-   bantuan  : Menampilkan daftar sintaks me-refresh ingatan sintaks
+   bantuan  : Menampilkan daftar sintaks
    keluar   : Keluar dari REPL interaktif
 ==================================================
 """
@@ -111,7 +114,18 @@ class Interpreter:
 
         context = {
             "__panggil": lambda fn_name, *args: self.panggil_fungsi(fn_name, *args),
-            "str": str, "int": int, "float": float, "len": len, "list": list, "dict": dict,
+            # Fungsi konversi tipe data dalam Bahasa Indonesia
+            "tulisan": str,
+            "bulat": int,
+            "desimal": float,
+            # Alias opsional agar kode lama tetap bisa berjalan
+            "str": str,
+            "int": int,
+            "float": float,
+            # Fungsi bawaan lainnya
+            "len": len,
+            "list": list,
+            "dict": dict,
             "ukuran": len,
             "akar": math.sqrt,
             "pangkat": pow,
@@ -281,7 +295,6 @@ def mulai_repl():
             daftar_baris = [(baris_ke, baris_input)]
             baris_ke += 1
 
-            # Deteksi pembuka blok untuk mendukung multi-line REPL
             b_strip = baris_input.strip()
             butuh_blok = (
                 b_strip.startswith("fungsi ") or 
