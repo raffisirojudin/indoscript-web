@@ -27,7 +27,7 @@ cetak daftar_angka`,
   looping: `# Contoh Perulangan
 simpan hitungan = 3
 selama hitungan > 0
-    cetak "Hitung mundur: " + str(hitungan)
+    cetak "Hitung mundur: " + tulisan(hitungan)
     simpan hitungan = hitungan - 1
 selesai
 cetak "Selesai!"`,
@@ -38,8 +38,8 @@ fungsi tambah_lima(angka)
 selesai
 
 simpan hasil = panggil tambah_lima(10)
-cetak "Hasil: " + str(hasil)
-cetak "Akar dari 81 adalah: " + str(akar(81))`
+cetak "Hasil: " + tulisan(hasil)
+cetak "Akar dari 81 adalah: " + tulisan(akar(81))`
 };
 
 // 1. Register Bahasa & Syntax Highlighting IndoScript di Monaco Editor
@@ -56,7 +56,7 @@ require(['vs/editor/editor.main'], function() {
       'selesai', 'ulang', 'kali', 'selama', 'tambah', 'hapus', 
       'tulis_file', 'fungsi', 'kembalikan', 'panggil'
     ],
-    builtins: ['ukuran', 'akar', 'pangkat', 'acak', 'baca_file', 'str', 'int', 'float'],
+    builtins: ['ukuran', 'akar', 'pangkat', 'acak', 'baca_file', 'tulisan', 'bulat', 'desimal'],
     tokenizer: {
       root: [
         [/[a-zA-Z_]\w*/, {
